@@ -35,6 +35,15 @@ server {
 		include /config/nginx/proxy.conf;
 		proxy_pass http://lazylibrarian:5299;
 	}
+	
+	# nzbget
+	# NZBGet is a usenet downloader.
+	location ^~ /nzbget {
+		auth_basic "Restricted";
+		auth_basic_user_file /config/nginx/.htpasswd;
+		include /config/nginx/proxy.conf;
+		proxy_pass http://nzbget:6789;
+	}
 
 }
 
