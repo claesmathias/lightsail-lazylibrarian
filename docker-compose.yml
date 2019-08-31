@@ -53,7 +53,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime
       - /home/centos/noip:/config
-      - /home/centos/lightsail-cloud9/noip.conf:/config/noip.conf
+      - /home/centos/lightsail-lazylibrarian/noip.conf:/config/noip.conf
     environment:
       - PGID=1000 #optional
       - PUID=1000 #optional
