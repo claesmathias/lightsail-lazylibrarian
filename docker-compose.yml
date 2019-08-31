@@ -31,8 +31,7 @@ services:
       - /home/centos/lightsail-lazylibrarian/nginx:/config/nginx/site-confs/default
     depends_on:
       - "no-ip"
-      - "nzbget"
-      - ""
+      - "lazylibrarian"
     networks:
       - app_net
     healthcheck:
@@ -99,6 +98,8 @@ services:
       - PUID=1000
       - TZ=${TZ}
       - DOCKER_MODS=linuxserver/calibre-web:calibre #optional
+    depends_on:
+      - "nzbget"
     networks:
       - app_net
 
