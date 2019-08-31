@@ -20,6 +20,7 @@ services:
       - EMAIL=${EMAIL}
       - URL=${URL}
       - EXTRA_DOMAINS=${EXTRA_DOMAINS}
+      - SUB_DOMAINS=${SUB_DOMAINS}
       - DHLEVEL=2048
       - TZ=${TZ}
       - VALIDATION=http
